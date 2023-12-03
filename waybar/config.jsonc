@@ -11,9 +11,6 @@
     "modules-right": ["tray","bluetooth","backlight", "custom/randwall", "network", "pulseaudio", "battery","clock", "custom/power"],
     // Modules configuration
 
-   
-  
-
     "custom/acpi": {
       "exec": "$HOME/.config/waybar/scripts/acpi.sh",
       "format": "{icon}",
@@ -23,7 +20,7 @@
      "format-icons": {
       "performance": "⚡",
       "balanced": "🔋",
-      "low-power": "🌙",
+      "low-power": "🌙"
 
      }
     },
@@ -59,12 +56,6 @@
         "on-scroll-down": "hyprctl dispatch workspace +1",
 		"format": "{name}",
 		"on-click": "activate",
-		// "format-icons": {
-		// 	"1": "1",
-		// 	"2": "2",
-		// 	"3": "3",
-		// 	"4": "4",
-		// 	"5": "5",
 			"urgent": "",
 			"active": "",
 			"default": "󰧞",
@@ -117,7 +108,7 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{icon} {time}",
-        // "format-good": "", // An empty format will hide the module
+        //"format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
 	},
@@ -146,7 +137,7 @@
     "format": "{ifname}",
     "format-wifi": " {signalStrength}%",
     "format-ethernet": "  {ipaddr}",
-    "format-disconnected": "Not connected", //An empty format will hide the module.
+    "format-disconnected": "Disconnected", //An empty format will hide the module.
     "tooltip-format": " {ifname} via {gwaddri}",
     "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
@@ -162,7 +153,6 @@
 	},
 
 	"backlight": {
-        // "device": "acpi_video1",
 	"format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
 //	"on-scroll-up":,
@@ -170,10 +160,10 @@
 	},
 
 	"pulseaudio": {
-    "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+    "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
